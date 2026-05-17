@@ -1,14 +1,224 @@
-/*
+﻿/*
 @header({
   searchable: 1,
   filterable: 0,
-  quickSearch: 0,
-  title: '电影港',
-  author: 'EylinSir',
+  quickSearch: 1,
+  title: '电影港[磁]',
+  author: 'pg',
   '类型': '影视',
-  logo: 'https://www.dyg123.net/favicon.ico',
   lang: 'ds'
 })
 */
 
-dmFyIHJ1bGUgPSB7CiAgICDnsbvlnos6ICflvbHop4YnLAogICAgYXV0aG9yOiAnRXlsaW5TaXInLAogICAgdGl0bGU6ICfnlLXlvbHmuK8nLAogICAgaG9zdDogJ2h0dHBzOi8vd3d3LmR5ZzEyMy5uZXQnLAogICAgaG9tZVVybDogJy8nLAogICAgdXJsOiAnL2UvYWN0aW9uL0xpc3RJbmZvLnBocD9meWZpbHRlcicsCiAgICBsb2dvOiAnaHR0cHM6Ly93d3cuZHlnMTIzLm5ldC9mYXZpY29uLmljbycsCiAgICBmaWx0ZXJfdXJsOiAnY2xhc3NpZD17e2ZsLmNhdGVJZCBvciAiZnljbGFzcyJ9fSZwYWdlPShmeXBhZ2UtMSkmbGluZT0zMCZ0ZW1waWQ9MSZvcmRlcmJ5PXt7ZmwuYnkgb3IgIm5ld3N0aW1lIn19JywKICAgIHNlYXJjaFVybDogJy9lL3NlYXJjaC9pbmRleC5waHAnLAogICAgZGV0YWlsVXJsOiAnJywKICAgIHNlYXJjaGFibGU6IDEsIAogICAgcXVpY2tTZWFyY2g6IDAsIAogICAgZmlsdGVyYWJsZTogMCwgCiAgICB0aW1lb3V0OiA1MDAwLAogICAgbGltaXQ6IDIwLAogICAgaGVhZGVyczogeydVc2VyLUFnZW50JzogTU9CSUxFX1VBfSwKICAgIGNsYXNzX25hbWU6ICfnlLXlvbEm5Ymn6ZuGJue7vOiJuibliqjnlLsm55+t5YmnJywKICAgIGNsYXNzX3VybDogJzEmMjAmMzEmMzAmMzInLAogICAgZmlsdGVyOiAnSDRzSUFBQUFBQUFBQTZ2bVVnQUNKVU1scTJnd0N3U3FsYkpUSzVXc2xKSVRTMUk5VTVSMGxQSVNjMU9CL09jYmR6K2QxdzNrbHlYbWxBSUZvcXVWOG9EQ1QxdFh2R3hlQVJJR2NneVZhbldnd2wwcm51eWQ4N3l6SFNwamhKQ1pOdWRwNTNLRWpERmM1bm5IeG1mTnJRZ1pFNFRNOG9sUGQrNUd5SmdpVE90Y2pxTEhEQzd6ckhIQ3M0WnBDQmx6aEV6SGpDZTdPaEV5aGdpcDU3dFdQZDA3RlVuS1FxazJ0bFlISTNDU0toRUI4Nnh2MHROZC9SZ0I4MnhPdzdOcEc2RG01S1dXRjVka0FwWERMSHF5YTllekRWT2dzdmw1eVRtWnlka2dxOEEyeFVJc1ZESXlvRmJFQUUyQ2g5anN2Y0JBZzRrall1elo5S1V2NTY5RWtrSkV6TE0xeTUvdjYwT1NNaG5JVURIR21senBaRGZXR0tHVDNVWURZRGRYTFFBTWhxdkhKQVFBQUE9PScsCiAgICDmjqjojZA6ICcqJywKICAgIAogICAg5LiA57qnOiBhc3luYyBmdW5jdGlvbiAoKSB7CiAgICAgICAgcmV0dXJuIHJ1bGUuZ2V0Vm9kTGlzdChhd2FpdCBmZXRjaCh0aGlzLmlucHV0KSk7CiAgICB9LAoKICAgIOaQnOe0ojogYXN5bmMgZnVuY3Rpb24gKCkgewogICAgICAgIGxldCB7aW5wdXQsIEtFWSwgSE9TVH0gPSB0aGlzOwogICAgICAgIGxldCBWT0RTID0gW107CiAgICAgICAgbGV0IGh0bWwgPSBhd2FpdCBmZXRjaChpbnB1dCwgewogICAgICAgICAgICBoZWFkZXJzOiB7Li4ucnVsZS5oZWFkZXJzLCAiQ29udGVudC1UeXBlIjogImFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZDsgY2hhcnNldD11dGYtOCJ9LAogICAgICAgICAgICBtZXRob2Q6ICdQT1NUJywKICAgICAgICAgICAgYm9keTogYGtleWJvYXJkPSR7S0VZfSZzdWJtaXQ95pCc57SiJnNob3c9dGl0bGUmdGVtcGlkPTFgCiAgICAgICAgfSk7CiAgICAgICAgVk9EUy5wdXNoKC4uLnJ1bGUuZ2V0Vm9kTGlzdChodG1sKSk7CiAgICAgICAgbGV0IHNlYXJjaElkID0gcnVsZS5jdXRTdHIoaHRtbCwgJ3NlYXJjaGlkPScsICciJywgJycpOwogICAgICAgIGlmIChzZWFyY2hJZCkgewogICAgICAgICAgICBsZXQgbmV4dEh0bWwgPSBhd2FpdCBmZXRjaChgJHtIT1NUIHx8IHJ1bGUuaG9zdH0vZS9zZWFyY2gvcmVzdWx0L2luZGV4LnBocD9wYWdlPTEmc2VhcmNoaWQ9JHtzZWFyY2hJZH1gKTsKICAgICAgICAgICAgVk9EUy5wdXNoKC4uLnJ1bGUuZ2V0Vm9kTGlzdChuZXh0SHRtbCkpOwogICAgICAgIH0KICAgICAgICByZXR1cm4gVk9EUzsKICAgIH0sCgogICAg5LqM57qnOiBhc3luYyBmdW5jdGlvbiAoKSB7CiAgICAgICAgbGV0IHtpbnB1dCwgSE9TVH0gPSB0aGlzOwogICAgICAgIGxldCBbaWQsIGtuYW1lLCBrcGljLCBrcmVtYXJrc10gPSBpbnB1dC5zcGxpdCgnQCcpOwogICAgICAgIGxldCBodG1sID0gYXdhaXQgZmV0Y2goaWQpOwogICAgICAgIGNvbnN0IGNsZWFuID0gKHMpID0+IHsKICAgICAgICAgICAgaWYgKCFzKSByZXR1cm4gJyc7CiAgICAgICAgICAgIHRyeSB7IHMgPSBkZWNvZGVVUklDb21wb25lbnQocyk7IH0gY2F0Y2ggKGUpIHt9CiAgICAgICAgICAgIHJldHVybiBzLnJlcGxhY2UoLzxbXj5dKz58Jm5ic3A7fFxzK3zmiYvmnLrniYh8LeWcqOe6v+WFjei0ueingueciy1855S15b2x5rivKD86XChEU1wpKT8vZywgJycpLnRyaW0oKTsKICAgICAgICB9OwogICAgICAgIGxldCBrZGV0YWlsID0gcGRmaChodG1sLCAnLmN0LWwnKS5zcGxpdCgnPHN0cm9uZz4nKVswXTsKICAgICAgICBsZXQgZmluYWxOYW1lID0gY2xlYW4ocGRmaChodG1sLCAndGl0bGUnKSkgfHwgY2xlYW4oa25hbWUpOwogICAgICAgIGxldCB0YWJzID0gWwogICAgICAgICAgICAuLi4ocGRmYShodG1sLCAnc3Ryb25nOmhhcyhzcGFuKScpLm1hcCgoaXQsIGkpID0+IHJ1bGUuY3V0U3RyKGl0LCAn44CQJywgJ+OAkScsIGDno4Hlipvnur8ke2kgKyAxfWApKSksCiAgICAgICAgICAgIC4uLihwZGZhKGh0bWwsICcjdGFiODEnKS5tYXAoaXQgPT4gcGRmaChpdCwgJ2JvZHkmJlRleHQnKSkpCiAgICAgICAgXTsKICAgICAgICBsZXQgdXJscyA9IFsKICAgICAgICAgICAgLi4uKHBkZmEoaHRtbCwgJ3Rib2R5JykubWFwKGl0ZW0gPT4gCiAgICAgICAgICAgICAgICBwZGZhKGl0ZW0sICdhJykubWFwKGl0ID0+IHBkZmgoaXQsICdib2R5JiZUZXh0JykgKyAnJCcgKyBwZGZoKGl0LCAnYSYmaHJlZicpKS5qb2luKCcjJykKICAgICAgICAgICAgKSksCiAgICAgICAgICAgIC4uLihwZGZhKGh0bWwsICcudmlkZW91cmwnKS5tYXAoaXRlbSA9PiAKICAgICAgICAgICAgICAgIHBkZmEoaXRlbSwgJ2EnKS5tYXAoaXQgPT4gcGRmaChpdCwgJ2JvZHkmJlRleHQnKSArICckJyArIHBkKGl0LCAnYSYmaHJlZicsIEhPU1QgfHwgcnVsZS5ob3N0KSkuam9pbignIycpCiAgICAgICAgICAgICkpCiAgICAgICAgXTsKCiAgICAgICAgcmV0dXJuIHsKICAgICAgICAgICAgdm9kX2lkOiBpZCwKICAgICAgICAgICAgdm9kX25hbWU6IGZpbmFsTmFtZSwKICAgICAgICAgICAgdm9kX3BpYzoga3BpYywKICAgICAgICAgICAgdHlwZV9uYW1lOiBydWxlLmN1dFN0cihrZGV0YWlsLCAn4peO57G75YirJywgJ+KXjicsICfnsbvlnosnKSwKICAgICAgICAgICAgdm9kX3JlbWFya3M6IGNsZWFuKGtyZW1hcmtzKSwKICAgICAgICAgICAgdm9kX3llYXI6IHJ1bGUuY3V0U3RyKGtkZXRhaWwsICfil47lubTku6MnLCAn4peOJywgJzEwMDAnKSwKICAgICAgICAgICAgdm9kX2FyZWE6IHJ1bGUuY3V0U3RyKGtkZXRhaWwsICfil47kuqflnLAnLCAn4peOJywgJ+WcsOWMuicpLAogICAgICAgICAgICB2b2RfbGFuZzogcnVsZS5jdXRTdHIoa2RldGFpbCwgJ+KXjuivreiogCcsICfil44nLCAn6K+t6KiAJyksCiAgICAgICAgICAgIHZvZF9kaXJlY3RvcjogcnVsZS5jdXRTdHIoa2RldGFpbCwgJ+KXjuWvvOa8lCcsICfil44nLCAn5a+85ryUJyksCiAgICAgICAgICAgIHZvZF9hY3RvcjogcnVsZS5jdXRTdHIoa2RldGFpbCwgJ+KXjua8lOWRmCcsICc8L3A+JywgJycpIHx8IHJ1bGUuY3V0U3RyKGtkZXRhaWwsICfil47kuLvmvJQnLCAnPC9wPicsICfkuLvmvJQnKSwKICAgICAgICAgICAgdm9kX2NvbnRlbnQ6IGNsZWFuKHJ1bGUuY3V0U3RyKGtkZXRhaWwsICfil47nroDku4vCoz4nLCAnPC9wPicsICcnKSkgfHwgZmluYWxOYW1lLAogICAgICAgICAgICB2b2RfcGxheV9mcm9tOiB0YWJzLmpvaW4oJyQkJCcpLAogICAgICAgICAgICB2b2RfcGxheV91cmw6IHVybHMuam9pbignJCQkJykKICAgICAgICB9OwogICAgfSwKCiAgICBwbGF5X3BhcnNlOiB0cnVlLAogICAgbGF6eTogYXN5bmMgZnVuY3Rpb24gKCkgewogICAgICAgIGxldCB7aW5wdXR9ID0gdGhpczsKICAgICAgICBpZiAoL15tYWduZXQvLnRlc3QoaW5wdXQpKSByZXR1cm4geyBqeDogMCwgcGFyc2U6IDAsIHVybDogaW5wdXQgfTsKICAgICAgICBsZXQgdXJsID0gaW5wdXQ7CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgbGV0IGh0bWwgPSBhd2FpdCBmZXRjaChpbnB1dCk7CiAgICAgICAgICAgIGxldCByZWFsVXJsID0gcnVsZS5jdXRTdHIoaHRtbCwgImE6JyIsICInIiwgJycpOwogICAgICAgICAgICBpZiAoIS9tM3U4fG1wNHxta3YvLnRlc3QocmVhbFVybCkpIHsKICAgICAgICAgICAgICAgIGxldCBpZnJhbWVTcmMgPSBydWxlLmN1dFN0cihodG1sLCAnPGlmcmFtZcKjc3JjPSInLCAnIicsICcnKTsKICAgICAgICAgICAgICAgIGlmIChpZnJhbWVTcmMpIHsKICAgICAgICAgICAgICAgICAgICBsZXQgaWZyYW1lSHRtbCA9IGF3YWl0IGZldGNoKGlmcmFtZVNyYyk7CiAgICAgICAgICAgICAgICAgICAgcmVhbFVybCA9IGdldEhvbWUoaWZyYW1lU3JjKSArIHJ1bGUuY3V0U3RyKGlmcmFtZUh0bWwsICd1cmwgPSAiJywgJyInLCAnJyk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgaWYgKC9tM3U4fG1wNHxta3YvLnRlc3QocmVhbFVybCkpIHVybCA9IHJlYWxVcmw7CiAgICAgICAgfSBjYXRjaCAoZSkge30KICAgICAgICAKICAgICAgICByZXR1cm4geyBqeDogMCwgcGFyc2U6IDEsIHVybDogdXJsLCBoZWFkZXI6IHJ1bGUuaGVhZGVycyB9OwogICAgfSwKCiAgICBnZXRWb2RMaXN0OiBmdW5jdGlvbihodG1sKSB7CiAgICAgICAgbGV0IGxpc3QgPSBwZGZhKGh0bWwsICcubTEnKSB8fCBbXTsKICAgICAgICByZXR1cm4gbGlzdC5tYXAoaXQgPT4gewogICAgICAgICAgICBsZXQgbmFtZSA9IHJ1bGUuY3V0U3RyKGl0LCAnYWx0PSInLCAnIicsICflkI3np7AnKTsKICAgICAgICAgICAgbGV0IHBpYyA9IHJ1bGUuY3V0U3RyKGl0LCAnZGF0YS1vcmlnaW5hbD0iJywgJyInLCAn5Zu+54mHJyk7CiAgICAgICAgICAgIGxldCByZW1hcmsgPSBydWxlLmN1dFN0cihpdCwgJ290aGVyIj4nLCAnPC9wPicsICfnirbmgIEnKTsKICAgICAgICAgICAgdHJ5IHsgcmVtYXJrID0gZGVjb2RlVVJJQ29tcG9uZW50KHJlbWFyaykucmVwbGFjZSgvPFtePl0rPnwmbmJzcDsvZywgJycpLnRyaW0oKTsgfSBjYXRjaChlKSB7fQogICAgICAgICAgICByZXR1cm4gewogICAgICAgICAgICAgICAgdm9kX25hbWU6IG5hbWUsCiAgICAgICAgICAgICAgICB2b2RfcGljOiBwaWMsCiAgICAgICAgICAgICAgICB2b2RfcmVtYXJrczogcmVtYXJrLAogICAgICAgICAgICAgICAgdm9kX2lkOiBgJHtydWxlLmN1dFN0cihpdCwgJ2hyZWY9IicsICciJywgJ0lkJyl9QCR7bmFtZX1AJHtwaWN9QCR7cmVtYXJrfWAKICAgICAgICAgICAgfTsKICAgICAgICB9KTsKICAgIH0sCgogICAgY3V0U3RyOiBmdW5jdGlvbihzdHIsIHByZSwgc3VmLCBkZWYgPSAnJykgewogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGlmICghc3RyKSByZXR1cm4gZGVmOwogICAgICAgICAgICBsZXQgZXNjID0gcyA9PiBzLnJlcGxhY2UoL1suKis/JHt9KCl8W1xdXFwvXl0vZywgJ1xcJCYnKS5yZXBsYWNlKC/Coy9nLCAnW15dKj8nKTsKICAgICAgICAgICAgbGV0IHJlZyA9IG5ldyBSZWdFeHAoYCR7ZXNjKHByZSl9KFteXSo/KSR7ZXNjKHN1Zil9YCk7CiAgICAgICAgICAgIGxldCByZXMgPSBzdHIubWF0Y2gocmVnKT8uWzFdID8/IGRlZjsKICAgICAgICAgICAgcmV0dXJuIHJlcy5yZXBsYWNlKC88W14+XSs+fCZuYnNwO3xccysvZywgJyAnKS50cmltKCk7CiAgICAgICAgfSBjYXRjaCB7IHJldHVybiBkZWY7IH0KICAgIH0KfTs=
+var rule = {
+	title:'电影港[磁]',
+	编码:'gb2312',
+	搜索编码:'gb2312',
+	host:'https://www.dygang.tv',
+	homeUrl:'/',
+	url: '/fyclass/index_fypage.htm?',
+	filter_url:'{{fl.class}}',
+	filter:{
+	},
+	searchUrl: '/e/search/index123.php#tempid=1&tbname=article&keyborad=**&show=title%2Csmalltext&Submit=%CB%D1%CB%F7;post',
+	searchable:2,
+	quickSearch:0,
+	filterable:0,
+	headers:{
+		'User-Agent': 'MOBILE_UA',
+		'Referer': 'https://www.dygang.tv/'
+	},
+	timeout:5000,
+	class_name:'最新电影&经典高清&国配电影&经典港片&国剧&日韩剧&美剧&综艺&动漫&纪录片&高清原盘&4K高清区&3D电影&电影专题',
+	class_url:'ys&bd&gy&gp&dsj&dsj1&yx&zy&dmq&jilupian&1080p&4K&3d&dyzt',
+	play_parse:true,
+	play_json:[{
+		re:'*',
+		json:{
+			parse:0,
+			jx:0
+		}
+	}],
+	lazy:'',
+	limit:6,
+	推荐:'div#tl tr:has(>td>table.border1>tbody>tr>td>a>img);table.border1 img&&alt;table.border1 img&&src;table:eq(2)&&Text;a&&href',
+	一级:`js:
+		pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
+		let d = [];
+		let turl = (MY_PAGE === 1)? '/' : '/index_'+ MY_PAGE + '.htm';
+		input = rule.homeUrl + MY_CATE + turl;
+		let html = request(input);
+		let list = pdfa(html, 'tr:has(>td>table.border1)');
+		list.forEach(it => {
+			let title = pdfh(it, 'table.border1 img&&alt');
+			if (title!==""){
+				d.push({
+					title: title,
+					desc: pdfh(it, 'table:eq(1)&&Text'),
+					pic_url: pd(it, 'table.border1 img&&src', HOST),
+					url: pdfh(it, 'a&&href')
+				});
+			}
+		})
+		setResult(d);
+	`,
+	二级:{
+		title:"div.title a&&Text",
+		img:"#dede_content img&&src",
+		desc:"#dede_content&&Text",
+		content:"#dede_content&&Text",
+		tabs:`js:
+pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
+TABS=[]
+let d = pdfa(html, '#dede_content table tbody tr');
+let tabsa = [];
+let tabsq = [];
+let tabsm = false;
+let tabse = false;
+let tabm3u8 = [];
+d.forEach(function(it) {
+	let burl = pd(it, 'a&&href',HOST);
+	if (burl.startsWith("https://www.aliyundrive.com/s/") || burl.startsWith("https://www.alipan.com/s/"){
+		tabsa.push("阿里雲盤");
+	}else if (burl.startsWith("https://pan.quark.cn/s/")){
+		tabsq.push("夸克網盤");
+	}else if (burl.startsWith("magnet")){
+		tabsm = true;
+	}else if (burl.startsWith("ed2k")){
+		tabse = true;
+	}
+});
+if (false){
+d = pdfa(html, 'div:has(>div#post_content) div.widget:has(>h3)');
+d.forEach(function(it) {
+	tabm3u8.push(pdfh(it, 'h3&&Text'));
+});
+}
+if (tabsm === true){
+	TABS.push("磁力");
+}
+if (tabse === true){
+	TABS.push("電驢");
+}
+if (false && tabsa.length + tabsq.length > 1){
+	TABS.push("選擇右側綫路");
+}
+let tmpIndex;
+tmpIndex=1;
+tabsa.forEach(function(it){
+	TABS.push(it + tmpIndex);
+	tmpIndex = tmpIndex + 1;
+});
+tmpIndex=1;
+tabsq.forEach(function(it){
+	TABS.push(it + tmpIndex);
+	tmpIndex = tmpIndex + 1;
+});
+tabm3u8.forEach(function(it){
+	TABS.push(it);
+});
+log('dygang TABS >>>>>>>>>>>>>>>>>>' + TABS);
+`,
+		lists:`js:
+log(TABS);
+pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
+LISTS = [];
+let d = pdfa(html, '#dede_content table tbody tr');
+let lista = [];
+let listq = [];
+let listm = [];
+let liste = [];
+let listm3u8 = {};
+d.forEach(function(it){
+	let burl = pd(it, 'a&&href',HOST);
+	let title = pdfh(it, 'a&&Text');
+	log('dygang title >>>>>>>>>>>>>>>>>>>>>>>>>>' + title);
+	log('dygang burl >>>>>>>>>>>>>>>>>>>>>>>>>>' + burl);
+	let loopresult = title + '$' + burl;
+	if (burl.startsWith("https://www.aliyundrive.com/s/") || burl.startsWith("https://www.alipan.com/s/"){
+		if (true){
+		if (TABS.length==1){
+			burl = "http://127.0.0.1:9978/proxy?do=ali&type=push&confirm=0&url=" + encodeURIComponent(burl);
+		}else{
+			burl = "http://127.0.0.1:9978/proxy?do=ali&type=push&url=" + encodeURIComponent(burl);
+		}
+		}else{
+			burl = 'push://' + burl;
+		}
+		loopresult = title + '$' + burl;
+		lista.push(loopresult);
+	}else if (burl.startsWith("https://pan.quark.cn/s/")){
+		if (true){
+		if (TABS.length==1){
+			burl = "http://127.0.0.1:9978/proxy?do=quark&type=push&confirm=0&url=" + encodeURIComponent(burl);
+		}else{
+			burl = "http://127.0.0.1:9978/proxy?do=quark&type=push&url=" + encodeURIComponent(burl);
+		}
+		}else{
+			burl = 'push://' + burl;
+		}
+		loopresult = title + '$' + burl;
+		listq.push(loopresult);
+	}else if (burl.startsWith("magnet")){
+		listm.push(loopresult);
+	}else if (burl.startsWith("ed2k")){
+		liste.push(loopresult);
+	}
+});
+if (listm.length>0){
+	LISTS.push(listm);
+}
+if (liste.length>0){
+	LISTS.push(liste);
+}
+lista.forEach(function(it){
+	LISTS.push([it]);
+});
+listq.forEach(function(it){
+	LISTS.push([it]);
+});
+for ( const key in listm3u8 ){
+	if (listm3u8.hasOwnProperty(key)){
+		LISTS.push(listm3u8[key]);
+	}
+};
+`,
+
+	},
+	搜索:`js:
+pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
+let params = 'tempid=1&tbname=article&keyboard=' + KEY + '&show=title%2Csmalltext&Submit=%CB%D1%CB%F7';
+let _fetch_params = JSON.parse(JSON.stringify(rule_fetch_params));
+let postData = {
+    method: "POST",
+    body: params
+};
+delete(_fetch_params.headers['Content-Type']);
+Object.assign(_fetch_params, postData);
+log("dygang search postData>>>>>>>>>>>>>>>" + JSON.stringify(_fetch_params));
+let search_html = request( HOST + '/e/search/index123.php', _fetch_params, true);
+//log("dygang search result>>>>>>>>>>>>>>>" + search_html);
+let d=[];
+let dlist = pdfa(search_html, 'table.border1');
+dlist.forEach(function(it){
+	let title = pdfh(it, 'img&&alt');
+	if (searchObj.quick === true){
+		if (false && title.includes(KEY)){
+			title = KEY;
+		}
+	}
+	let img = pd(it, 'img&&src', HOST);
+	let content = pdfh(it, 'img&&alt');
+	let desc = pdfh(it, 'img&&alt');
+	let url = pd(it, 'a&&href', HOST);
+	d.push({
+		title:title,
+		img:img,
+		content:content,
+		desc:desc,
+		url:url
+		})
+});
+setResult(d);
+`,
+}

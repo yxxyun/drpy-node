@@ -12,8 +12,8 @@
 
 var rule = {
 	title:'人人影视[搜]',
-	host:'https://yyets.click',
-	homeUrl:'/',
+	host:'http://127.0.0.1:10079',
+	homeUrl:'/p/0/socks5:%252F%252F192.168.101.1:1080/https://yyets.click/',
 	url:'*',
 	filter_url:'{{fl.class}}',
 	filter:{
