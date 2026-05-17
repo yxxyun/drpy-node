@@ -21,8 +21,8 @@ const {fastify, wsApp} = fastlogger;
 
 // 获取当前路径
 const __dirname = PROJECT_ROOT;
-const PORT = 5757;
-const WsPORT = 57575;
+const PORT = parseInt(process.env.PORT || '5757', 10);
+const WsPORT = parseInt(process.env.WS_PORT || '57575', 10);
 const MAX_TEXT_SIZE = process.env.MAX_TEXT_SIZE || 0.1 * 1024 * 1024; // 设置最大文本大小为 0.1 MB
 const MAX_IMAGE_SIZE = process.env.MAX_IMAGE_SIZE || 0.5 * 1024 * 1024; // 设置最大图片大小为 500 KB
 // 定义options的目录
@@ -113,8 +113,11 @@ fastify.addHook('onRequest', async (req, reply) => {
 });
 
 process.on("uncaughtException", (err) => {
-    console.error("未捕获异常:", err);
+    console.error("【ERROR】未捕获异常:", err);
+    const memUsage = process.memoryUsage();
+    console.error(`【ERROR】内存使用 - RSS: ${(memUsage.rss / 1024 / 1024).toFixed(2)}MB, Heap: ${(memUsage.heapUsed / 1024 / 1024).toFixed(2)}/${(memUsage.heapTotal / 1024 / 1024).toFixed(2)}MB`);
     // 不退出，让主进程继续跑
+    // 注意: 进程已处于未定义状态，后续操作可能不稳定
 });
 
 process.on('unhandledRejection', (err) => {

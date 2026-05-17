@@ -130,7 +130,13 @@ export const validateJs = async (request, reply, dr2Dir) => {
 export const validatHtml = async (request, reply, rootDir) => {
     if (request.url.endsWith('index.html')) {
         try {
-            const filePath = path.join(rootDir, request.url);
+            // 防止路径遍历：解析并规范化路径，确保不超出 rootDir
+            const requestedPath = path.resolve(rootDir, request.url);
+            const normalizedPath = path.normalize(requestedPath);
+            if (!normalizedPath.startsWith(path.resolve(rootDir))) {
+                return reply.code(403).send('Forbidden: Path traversal detected');
+            }
+            const filePath = normalizedPath;
             // console.log('filePath', filePath);
             // 读取文件内容
             let content = await readFile(filePath, 'utf8');
